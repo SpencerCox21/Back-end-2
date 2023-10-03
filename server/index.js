@@ -6,7 +6,21 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 
-const controller = require('./controller')
+
+
+
+const {getHouses, createHouse, deleteHouse, updateHouse} = require('./controller')
+
+ 
+
+
+app.get('/api/houses', getHouses)
+
+app.post('/api/houses', createHouse)
+
+app.delete('/api/houses/:id', deleteHouse)
+
+app.put('/api/houses/:id', updateHouse)
 
 
 
@@ -16,6 +30,4 @@ const controller = require('./controller')
 
 
 
-
-
-app.listen(1234, () => {console.log('Running on 1234')})
+app.listen(4004, () => {console.log('Running on server port: 4004')})
