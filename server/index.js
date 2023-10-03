@@ -28,6 +28,4 @@ app.put('/api/houses/:id', updateHouse)
 
 
 
-
-
 app.listen(4004, () => {console.log('Running on server port: 4004')})

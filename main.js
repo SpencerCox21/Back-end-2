@@ -24,6 +24,7 @@ function submitHandler(e) {
         imageURL: imageURL.value
     }
 
+    
     createHouse(bodyObj)
 
     address.value = ''
